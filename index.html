@@ -123,17 +123,40 @@
 </section>
 
 <section id="galeri">
-  <h2>Foto & Video Galeri</h2>
-  <div class="rooms">
-    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800" alt="Apart iç mekan">
-    <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=800" alt="Oturma alanı">
-    <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e?q=80&w=800" alt="Yatak odası">
-    <img src="https://images.unsplash.com/photo-1560185008-b033106af5c3?q=80&w=800" alt="Mutfak">
-  </div>
-  <div style="margin-top:20px;">
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Tanıtım Videosu" frameborder="0" allowfullscreen style="border-radius:12px;"></iframe>
+  <h2>Foto Galeri</h2>
+  <div class="slider">
+    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200" class="slide active">
+    <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1200" class="slide">
+    <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e?q=80&w=1200" class="slide">
+    <img src="https://images.unsplash.com/photo-1560185008-b033106af5c3?q=80&w=1200" class="slide">
   </div>
 </section>
+
+<section id="yorumlar">
+  <h2>Misafir Yorumları</h2>
+  <div class="rooms">
+    <div class="room"><div><p>“Temiz, güvenli ve konumu harika. Ankara’da kaldığım en rahat yerlerden biri.”</p><strong>— Ayşe K.</strong></div></div>
+    <div class="room"><div><p>“Uzun süreli konaklama için mükemmel. Kendimi evimde hissettim.”</p><strong>— Mehmet T.</strong></div></div>
+    <div class="room"><div><p>“Sessiz, konforlu ve personel çok ilgiliydi.”</p><strong>— Elif D.</strong></div></div>
+  </div>
+  <p style="margin-top:15px; font-size:14px;">Yorumlar yönetim onayından geçtikten sonra yayınlanır.</p>
+</section>
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll('.slide');
+setInterval(() => {
+  slides[index].classList.remove('active');
+  index = (index + 1) % slides.length;
+  slides[index].classList.add('active');
+}, 3000);
+</script>
+
+<style>
+.slider { position: relative; max-width: 100%; height: 350px; overflow: hidden; border-radius:12px; }
+.slide { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
+.slide.active { opacity: 1; }
+</style>
 
 <section id="iletisim">
   <h2>İletişim</h2>
