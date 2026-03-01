@@ -1,176 +1,90 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hope Apart</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-    header {
-      background: url('https://images.unsplash.com/photo-1560185007-cde436f6a4d0?q=80&w=1600') center/cover;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    header h1 {
-      font-size: 48px;
-      margin: 0;
-    }
-    header p {
-      font-size: 20px;
-    }
-    nav {
-      background: #222;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .rooms {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .room {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .room img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .room div {
-      padding: 15px;
-    }
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .btn {
-      display: inline-block;
-      background: #28a745;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPE APART | Ankara Konaklama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-<header>
-  <h1>Hope Apart</h1>
-  <p>Ankara'daki eviniz</p>
-  <a href="#iletisim" class="btn">Rezervasyon Yap</a>
-</header>
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-900">HOPE APART</h1>
+            <div class="space-x-4">
+                <a href="#galeri" class="hover:text-blue-600">Galeri</a>
+                <a href="#yorumlar" class="hover:text-blue-600">Yorumlar</a>
+                <a href="#iletisim" class="bg-blue-900 text-white px-4 py-2 rounded">Rezervasyon</a>
+            </div>
+        </div>
+    </nav>
 
-<nav>
-  <a href="#hakkimizda">Hakkımızda</a>
-  <a href="#odalar">Odalar</a>
-  <a href="#iletisim">İletişim</a>
-</nav>
+    <section class="hero h-[500px] flex items-center justify-center text-center text-white">
+        <div>
+            <h2 class="text-5xl font-bold mb-4">Ankara'daki Eviniz</h2>
+            <p class="text-xl">Konfor, Güven ve Huzurun Adresi</p>
+        </div>
+    </section>
 
-<section id="hakkimizda">
-  <h2>Hakkımızda</h2>
-  <p>Hope Apart, Ankara Çankaya Anıttepe'de bulunan modern bir aparttır. 7/24 giriş imkanı, güvenlik kameraları, otopark ve tam donanımlı odalarıyla kısa ve uzun süreli konaklamalar için idealdir.</p>
-</section>
+    <section class="container mx-auto py-16 px-4 text-center">
+        <h3 class="text-3xl font-bold mb-8">Neden Biz?</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-6 bg-white rounded shadow">
+                <i class="fas fa-map-marker-alt text-4xl text-blue-900 mb-4"></i>
+                <h4 class="font-bold">Merkezi Konum</h4>
+                <p>Çankaya Anıttepe'nin kalbinde, her yere yakın.</p>
+            </div>
+            <div class="p-6 bg-white rounded shadow">
+                <i class="fas fa-shield-alt text-4xl text-blue-900 mb-4"></i>
+                <h4 class="font-bold">Güvenli</h4>
+                <p>7/24 huzurlu bir konaklama deneyimi.</p>
+            </div>
+            <div class="p-6 bg-white rounded shadow">
+                <i class="fas fa-broom text-4xl text-blue-900 mb-4"></i>
+                <h4 class="font-bold">Hijyenik</h4>
+                <p>Düzenli temizlik ve dezenfeksiyon standartları.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="odalar">
-  <h2>Odalarımız</h2>
-  <div class="rooms">
-    <div class="room">
-      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=800" alt="Comfort Oda">
-      <div>
-        <h3>Comfort Oda</h3>
-        <p>Modern tasarım, sıcak aydınlatma ve tam donanımlı mutfak.</p>
-      </div>
-    </div>
-    <div class="room">
-      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800" alt="Family Oda">
-      <div>
-        <h3>Family Oda</h3>
-        <p>Geniş yaşam alanı ve aile konforu için ideal.</p>
-      </div>
-    </div>
-    <div class="room">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800" alt="Deluxe Oda">
-      <div>
-        <h3>Deluxe Oda</h3>
-        <p>Şık detaylar ve huzurlu bir konaklama deneyimi.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <section id="yorumlar" class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-30px font-bold text-center mb-10">Müşteri Yorumları</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg italic">"Ankara seyahatimde kaldım, çok temiz ve ilgiliydiler. Tavsiye ederim." - <b>Ahmet Y.</b></div>
+                <div class="bg-white p-6 rounded-lg italic">"Konumu harika, odalar çok ferah. Fiyat performans ürünü." - <b>Selin K.</b></div>
+            </div>
+        </div>
+    </section>
 
-<section id="galeri">
-  <h2>Foto Galeri</h2>
-  <div class="slider">
-    <img src="2023-11-10.webp" class="slide active">
-    <img src="2023-10-21.jpg" class="slide">
-    <img src="7DA0A7A93BB5F6586D7C714E2461550517473859.webp" class="slide">
-    <img src="galeri-1.jpg" class="slide">
-  </div>
-</section>
+    <section id="iletisim" class="container mx-auto py-16 px-4">
+        <div class="grid md:grid-cols-2 gap-10">
+            <div>
+                <h3 class="text-3xl font-bold mb-6">İletişim Bilgileri</h3>
+                <p class="mb-4">📍 <b>Adres:</b> Çankaya Anıttepe, Işık Sokak, Ankara</p>
+                <p class="mb-4">📞 <b>Telefon:</b> <a href="tel:05302074643" class="text-blue-600">0530 207 46 43</a></p>
+                <p class="mb-4">📷 <b>Instagram:</b> <a href="https://instagram.com/hope_apart" class="text-blue-600">@hope_apart</a></p>
+                <div class="mt-6">
+                    <a href="https://wa.me/905302074643" class="bg-green-500 text-white px-6 py-3 rounded-full inline-block">
+                        <i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz
+                    </a>
+                </div>
+                <p class="mt-8 text-sm text-gray-500 font-bold">* Fiyat bilgisi için lütfen arayınız.</p>
+            </div>
+            <div class="h-64 md:h-full min-h-[300px]">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3059.6238628045335!2d32.8436!3d39.9238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f0000000000%3A0x0!2zQW7EsXR0ZXBlLCBJxZ_GenericXByIFNrLiwgQ8ankYXlhL0Fua2FyYQ!5e0!3m2!1str!2str!4v1700000000000" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
 
-<section id="yorumlar">
-  <h2>Misafir Yorumları</h2>
-  <div class="rooms">
-    <div class="room"><div><p>“Temiz, güvenli ve konumu harika. Ankara’da kaldığım en rahat yerlerden biri.”</p><strong>— Ayşe K.</strong></div></div>
-    <div class="room"><div><p>“Uzun süreli konaklama için mükemmel. Kendimi evimde hissettim.”</p><strong>— Mehmet T.</strong></div></div>
-    <div class="room"><div><p>“Sessiz, konforlu ve personel çok ilgiliydi.”</p><strong>— Elif D.</strong></div></div>
-  </div>
-  <p style="margin-top:15px; font-size:14px;"></p>
-</section>
-
-<script>
-let index = 0;
-const slides = document.querySelectorAll('.slide');
-setInterval(() => {
-  slides[index].classList.remove('active');
-  index = (index + 1) % slides.length;
-  slides[index].classList.add('active');
-}, 3000);
-</script>
-
-<style>
-.slider { position: relative; max-width: 100%; height: 350px; overflow: hidden; border-radius:12px; }
-.slide { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
-.slide.active { opacity: 1; }
-</style>
-
-<section id="iletisim">
-  <h2>İletişim</h2>
-  <p>📍 Adres: Çankaya Anıttepe, Işık Sokak, Ankara</p>
-  <p>📞 Telefon: 0530 207 46 43</p>
-  <p>💬 WhatsApp: <a href="https://wa.me/905302074643" target="_blank">Mesaj Gönder</a></p>
-  <p>📷 Instagram: <a href="https://instagram.com/hope_apart" target="_blank">@hope_apart</a></p>
-  <p>💰 Fiyat bilgisi ve rezervasyon için lütfen telefonla iletişime geçiniz.</p>
-  <iframe src="https://www.google.com/maps?q=Çankaya+Anıttepe+Işık+Sokak+Ankara&output=embed" width="100%" height="300" style="border:0;border-radius:12px;margin-top:15px;" allowfullscreen="" loading="lazy"></iframe>
-</section>
-
-<footer>
-  <p>© 2026 Hope Apart | Tüm hakları saklıdır</p>
-</footer>
+    <footer class="bg-blue-900 text-white text-center py-6">
+        <p>&copy; 2024 HOPE APART - Tüm Hakları Saklıdır.</p>
+    </footer>
 
 </body>
 </html>
